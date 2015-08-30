@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WedingWebsite</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "slider", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "slider", "dropdownMenu", "data-turbolinks-track" => true  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render "layouts/header" %>
+	<%= yield %>
+</body>
+</html>

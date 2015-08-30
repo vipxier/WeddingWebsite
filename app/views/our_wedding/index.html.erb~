@@ -1,0 +1,5 @@
+<div class="slider">
+	<div class="container">
+		<%= render "our_wedding/slider" %>
+	</div>
+</div>
