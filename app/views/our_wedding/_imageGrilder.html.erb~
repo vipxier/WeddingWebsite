@@ -1,0 +1,45 @@
+<ul class="gridder">
+     <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
+	<% @images.each_with_index do |image, index| %>
+		<li class="gridder-list" data-griddercontent=<%= "#content"+(index+1).to_s %>>
+   			<%= image_tag "Wedding1/#{image.split('/').last}" %>
+		</li>
+ 	<% end %>
+</ul>
+
+<!-- Gridder content -->
+
+	<% @images.each_with_index do |image, index| %>
+		<div id=<%= "#content"+(index+1).to_s %> class="gridder-content">
+   			<%= content_tag(:img, <%= "Wedding1/"+ image.split('/').last.to_s %>) %>
+		</div>
+ 	<% end %>
+<div id="content1" class="gridder-content"><img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg"></div>
+
+<script>
+$(function() {
+
+    // Call Gridder
+    $('.gridder').gridderExpander({
+        scroll: true,
+        scrollOffset: 30,
+        scrollTo: "panel",                  // panel or listitem
+        animationSpeed: 400,
+        animationEasing: "easeInOutExpo",
+        showNav: true,                      // Show Navigation
+        nextText: "Next",                   // Next button text
+        prevText: "Previous",               // Previous button text
+        closeText: "Close",                 // Close button text
+        onStart: function(){
+            //Gridder Inititialized
+        },
+        onContent: function(){
+            //Gridder Content Loaded
+        },
+        onClosed: function(){
+            //Gridder Closed
+        }
+    });
+
+});
+</script>

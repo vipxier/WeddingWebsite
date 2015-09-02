@@ -3,3 +3,11 @@
 		<%= render "our_wedding/slider" %>
 	</div>
 </div>
+
+<div class="Grinder" >
+	<div class="container">
+		z
+	</div>
+</div>
+
+

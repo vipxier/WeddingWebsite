@@ -11,4 +11,6 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( slider.js )
 Rails.application.config.assets.precompile += %w( dropdownMenu.js )
+Rails.application.config.assets.precompile += %w( jquery.gridder.js )
+Rails.application.config.assets.precompile += %w( jquery.gridder.css )
 

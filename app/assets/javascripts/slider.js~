@@ -6,18 +6,19 @@ var main = function (){
 		  var currentDot = $('.active-dot');
 		  var nextDot = currentDot.next();
 
-		  if(nextSlide.length == 0) {
+		  if(nextSlide.length === 0) {
 		    nextSlide = $('.slide').first();
 		  }
 
 		  currentSlide.fadeOut(600).removeClass('active-slide');
 		  nextSlide.fadeIn(600).addClass('active-slide');
 			
-		if(nextDot.lenght ==0 ){
+		if(nextDot.length === 0 ){
+			console.log("last dot");
 			nextDot=$('.dot').first();
 		}
-		  currentDot.removeClass('.active-dot');
-		  nextDot.addClass('.active-dot');
+		  currentDot.removeClass('active-dot');
+		  nextDot.addClass('active-dot');
 	});
 
 	$('.arrow-prev').unbind('click').bind('click',function(){
@@ -34,7 +35,7 @@ var main = function (){
 		  currentSlide.fadeOut(600).removeClass('active-slide');
 		  preSlide.fadeIn(600).addClass('active-slide');
 			
-		if(prevDot.lenght == 0 ){
+		if(prevDot.length == 0 ){
 			prevDot=$('.dot').last();
 		}
 		  currentDot.removeClass('.active-dot');

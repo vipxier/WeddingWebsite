@@ -60,7 +60,7 @@ body{
 .slider {
   position: relative;
   width: 100%;
-  height: 470px;
+  height: 500px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -191,4 +191,9 @@ body{
 
 .get-app img {
   height: 40px;
+}
+
+.imageShortCut {
+	
+	display: block;
 }
